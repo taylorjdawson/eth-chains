@@ -1,0 +1,24 @@
+{
+  "name": "eth-chains",
+  "version": "0.1.0",
+  "description": "Helper module for getting Ethereum network info",
+  "main": "index.ts",
+  "author": "Taylor Dawson",
+  "license": "WTFPL",
+  "private": false,
+  "scripts": {
+    "build": "ts-node src/build.ts",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.37",
+    "got": "^11.8.2",
+    "json-to-ts": "^1.7.0",
+    "typescript": "^4.2.3"
+  },
+  "devDependencies": {
+    "@types/prettier": "^2.2.3",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1"
+  }
+}
