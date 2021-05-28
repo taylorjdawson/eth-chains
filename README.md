@@ -1,3 +1,5 @@
+[![Publish](https://github.com/taylorjdawson/eth-chains/actions/workflows/main.yml/badge.svg)](https://github.com/taylorjdawson/eth-chains/actions/workflows/main.yml)
+
 # Eth Chains
 Helper module for getting Ethereum chains info from [chainid.network](https://chainid.network/).
 
