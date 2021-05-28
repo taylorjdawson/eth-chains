@@ -1,6 +1,6 @@
 {
   "name": "eth-chains",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Helper module for getting Ethereum chains info.",
   "main": "index.ts",
   "author": "Taylor Dawson",

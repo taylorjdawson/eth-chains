@@ -1,8 +1,8 @@
 import { Chain } from './types'
 import { chains } from './chains'
-
+export { NativeCurrency, Explorer } from './types'
 export { ChainName, ChainId } from './enums'
-export { chains }
+export { chains, Chain }
 
 const getById = (id: number): Chain | undefined => chains[id]
 

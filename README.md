@@ -1,17 +1,49 @@
+# Eth Chains
+Helper module for getting Ethereum chains info from [chainid.network](https://chainid.network/).
 
-### Usage
-```js
+## Install
+```
+yarn add eth-chains
+```
+
+```
+npm install eth-chains
+```
+
+## Usage
+Import `chains` methods and enums:
+```ts
 import chains, { ChainId, ChainName } from 'eth-chains'
-
-chains.getById(ChainId.EthereumMainnet) // returns Ethereum Mainnet object
-chains.getByName(ChainName.EthereumMainnet)
-chains.get() // pass in a networkId or a networkName
-
+```
+### Chain names and ids via Enums:
+```ts
 console.log(ChainId.EthereumMainnet) // 1
 console.log(ChainId.BinanceSmartChainMainnet) // 56
-
 console.log(ChainName.EthereumMainnet) // "Ethereum Mainnet"
 ```
+
+### Chain by ID:
+```ts
+chains.getById(ChainId.EthereumMainnet) // { name: "Ethereum Mainnet", ..., "infoURL": "https://ethereum.org" }
+// Equivalent
+chains.getById(1) 
+```
+
+### Chain by Name:
+```ts
+chains.getByName(ChainName.EthereumMainnet) // { name: "Ethereum Mainnet", ..., "infoURL": "https://ethereum.org" }
+// Equivalent
+chains.getByName('Ethereum Mainnet')
+```
+
+### Typescript Types:
+```ts
+import { Chain, NativeCurrency, Explorer } from 'eth-chains'
+const ethereum: Chain = chains.getById(ChainId.EthereumMainnet)
+ethereum.chain // 'ETH'
+```
+
+---
 
 TODO:
 - [ ] Add webhook that watches the chains repo and triggers an update to this package whenever that repo gets updated
