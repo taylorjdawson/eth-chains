@@ -1,15 +1,15 @@
 import { Chain } from './types'
 import { chains } from './chains'
 
-export { NetworkName } from './enums'
+export { ChainName, ChainId } from './enums'
 export { chains }
 
-const getById = (id: number): Chain | {} => chains[id] || {}
+const getById = (id: number): Chain | undefined => chains[id]
 
-const getByName = (name: string): Chain | {} =>
+const getByName = (name: string): Chain | undefined =>
   Object.values(chains).find(chain => chain.name === name) || {}
 
-const get = (idOrName: string | number): Chain | {} =>
+const get = (idOrName: string | number): Chain | undefined =>
   typeof idOrName === 'number' ? getById(idOrName) : getByName(idOrName)
 
 export default {

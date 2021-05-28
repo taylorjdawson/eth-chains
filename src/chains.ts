@@ -140,6 +140,23 @@ export const chains: Chains = {
     explorers: [],
     infoURL: 'https://evrice.com'
   },
+  10101: {
+    name: 'Blockchain Genesis Mainnet',
+    chainId: 10101,
+    shortName: 'GEN',
+    chain: 'GEN',
+    network: 'mainnet',
+    networkId: 10101,
+    nativeCurrency: { name: 'GEN', symbol: 'GEN', decimals: 18 },
+    rpc: [
+      'https://eu.mainnet.xixoio.com',
+      'https://us.mainnet.xixoio.com',
+      'https://asia.mainnet.xixoio.com'
+    ],
+    faucets: [],
+    explorers: [],
+    infoURL: 'https://www.xixoio.com/'
+  },
   1012: {
     name: 'Newton',
     chainId: 1012,
@@ -405,43 +422,43 @@ export const chains: Chains = {
     infoURL: 'https://ether1.org'
   },
   1313161554: {
-    name: 'NEAR MainNet',
+    name: 'Aurora MainNet',
     chainId: 1313161554,
-    shortName: 'near',
+    shortName: 'aurora',
     chain: 'NEAR',
     network: 'mainnet',
     networkId: 1313161554,
-    nativeCurrency: { name: 'NEAR', symbol: 'NEAR', decimals: 24 },
-    rpc: [],
+    nativeCurrency: { name: 'Ether', symbol: 'aETH', decimals: 18 },
+    rpc: ['https://rpc.mainnet.aurora.dev:8545'],
     faucets: [],
     explorers: [],
-    infoURL: 'https://near.org/'
+    infoURL: 'https://aurora.dev'
   },
   1313161555: {
-    name: 'NEAR TestNet',
+    name: 'Aurora TestNet',
     chainId: 1313161555,
-    shortName: 'neart',
+    shortName: 'aurora-testnet',
     chain: 'NEAR',
     network: 'testnet',
     networkId: 1313161555,
-    nativeCurrency: { name: 'NEAR', symbol: 'tNEAR', decimals: 24 },
-    rpc: [],
-    faucets: ['https://wallet.testnet.near.org'],
+    nativeCurrency: { name: 'Ether', symbol: 'aETH', decimals: 18 },
+    rpc: ['https://rpc.testnet.aurora.dev:8545'],
+    faucets: [],
     explorers: [],
-    infoURL: 'https://near.org/'
+    infoURL: 'https://aurora.dev'
   },
   1313161556: {
-    name: 'NEAR BetaNet',
+    name: 'Aurora BetaNet',
     chainId: 1313161556,
-    shortName: 'nearb',
+    shortName: 'aurora-betanet',
     chain: 'NEAR',
     network: 'betanet',
     networkId: 1313161556,
-    nativeCurrency: { name: 'NEAR', symbol: 'bNEAR', decimals: 24 },
-    rpc: [],
+    nativeCurrency: { name: 'Ether', symbol: 'aETH', decimals: 18 },
+    rpc: ['https://rpc.betanet.aurora.dev:8545'],
     faucets: [],
     explorers: [],
-    infoURL: 'https://near.org/'
+    infoURL: 'https://aurora.dev'
   },
   1313500: {
     name: 'Xerom',
@@ -524,7 +541,7 @@ export const chains: Chains = {
     networkId: 16,
     nativeCurrency: { name: 'Coston Spark', symbol: 'CFLR', decimals: 18 },
     rpc: [],
-    faucets: [],
+    faucets: ['https://faucet.towolabs.com'],
     explorers: [],
     infoURL: 'https://github.com/flare-eng/coston'
   },
@@ -796,6 +813,23 @@ export const chains: Chains = {
     explorers: [],
     infoURL: 'https://akroma.io'
   },
+  20181205: {
+    name: 'quarkblockchain',
+    chainId: 20181205,
+    shortName: 'qki',
+    chain: 'QKI',
+    network: 'mainnet',
+    networkId: 20181205,
+    nativeCurrency: {
+      name: 'quarkblockchain Native Token',
+      symbol: 'QKI',
+      decimals: 18
+    },
+    rpc: ['https://hz.rpc.qkiscan.cn', 'https://jp.rpc.qkiscan.io'],
+    faucets: [],
+    explorers: [],
+    infoURL: 'https://quarkblockchain.org/'
+  },
   2020: {
     name: '420coin',
     chainId: 2020,
@@ -916,7 +950,7 @@ export const chains: Chains = {
     networkId: 246,
     nativeCurrency: { name: 'Energy Web Token', symbol: 'EWT', decimals: 18 },
     rpc: ['https://rpc.energyweb.org', 'wss://rpc.energyweb.org/ws'],
-    faucets: [],
+    faucets: ['https://faucet.carbonswap.exchange'],
     explorers: [],
     infoURL: 'https://energyweb.org'
   },
@@ -1120,16 +1154,16 @@ export const chains: Chains = {
       symbol: 'KCS',
       decimals: 18
     },
-    rpc: ['https://rpc-testnet.kucoin.one'],
-    faucets: ['https://faucet-testnet.kucoin.one'],
+    rpc: ['https://rpc-testnet.kcc.network'],
+    faucets: ['https://faucet-testnet.kcc.network'],
     explorers: [
       {
         name: 'kcc-scan',
-        url: 'https://scan-testnet.kucoin.one',
+        url: 'https://scan-testnet.kcc.network',
         standard: 'EIP3091'
       }
     ],
-    infoURL: 'https://scan-testnet.kucoin.one'
+    infoURL: 'https://scan-testnet.kcc.network'
   },
   32659: {
     name: 'Fusion Mainnet',
@@ -1421,11 +1455,11 @@ export const chains: Chains = {
     name: 'IoTeX Network Mainnet',
     chainId: 4689,
     shortName: 'iotex-mainnet',
-    chain: 'IOTX',
+    chain: 'iotex.io',
     network: 'mainnet',
     networkId: 4689,
     nativeCurrency: { name: 'IoTeX', symbol: 'IOTX', decimals: 18 },
-    rpc: ['https://babel-api.mainnet.iotex.one'],
+    rpc: ['https://babel-api.mainnet.iotex.io'],
     faucets: [],
     explorers: [],
     infoURL: 'https://iotex.io'
@@ -1434,12 +1468,12 @@ export const chains: Chains = {
     name: 'IoTeX Network Testnet',
     chainId: 4690,
     shortName: 'iotex-testnet',
-    chain: 'IOTX',
+    chain: 'iotex.io',
     network: 'testnet',
     networkId: 4690,
     nativeCurrency: { name: 'IoTeX', symbol: 'IOTX', decimals: 18 },
-    rpc: ['https://babel-api.testnet.iotex.one'],
-    faucets: [],
+    rpc: ['https://babel-api.testnet.iotex.io'],
+    faucets: ['https://faucet.iotex.io/'],
     explorers: [],
     infoURL: 'https://iotex.io'
   },
@@ -1514,6 +1548,22 @@ export const chains: Chains = {
     faucets: [],
     explorers: [],
     infoURL: 'https://xinfin.org'
+  },
+  5197: {
+    name: 'EraSwap Mainnet',
+    chainId: 5197,
+    shortName: 'es',
+    chain: 'ESN',
+    network: 'mainnet',
+    networkId: 5197,
+    nativeCurrency: { name: 'EraSwap', symbol: 'ES', decimals: 18 },
+    rpc: [
+      'https://mainnet.eraswap.network',
+      'https://rpc-mumbai.mainnet.eraswap.network'
+    ],
+    faucets: [],
+    explorers: [],
+    infoURL: 'https://eraswap.info/'
   },
   52: {
     name: 'CoinEx Smart Chain Mainnet',
@@ -1767,7 +1817,13 @@ export const chains: Chains = {
     },
     rpc: ['https://exchaintestrpc.okex.org'],
     faucets: ['https://www.okex.com/drawdex'],
-    explorers: [],
+    explorers: [
+      {
+        name: 'OKLink',
+        url: 'https://www.oklink.com/okexchain-test',
+        standard: 'EIP3091'
+      }
+    ],
     infoURL: 'https://www.okex.com/okexchain'
   },
   66: {
@@ -1784,7 +1840,13 @@ export const chains: Chains = {
     },
     rpc: ['https://exchainrpc.okex.org'],
     faucets: [],
-    explorers: [],
+    explorers: [
+      {
+        name: 'OKLink',
+        url: 'https://www.oklink.com/okexchain',
+        standard: 'EIP3091'
+      }
+    ],
     infoURL: 'https://www.okex.com/okexchain'
   },
   67: {
@@ -1980,6 +2042,25 @@ export const chains: Chains = {
     explorers: [],
     infoURL: 'https://ubiqsmart.com'
   },
+  80: {
+    name: 'GeneChain',
+    chainId: 80,
+    shortName: 'GeneChain',
+    chain: 'GeneChain',
+    network: 'mainnet',
+    networkId: 80,
+    nativeCurrency: { name: 'RNA', symbol: 'RNA', decimals: 18 },
+    rpc: ['https://rpc.genechain.io'],
+    faucets: [],
+    explorers: [
+      {
+        name: 'GeneChain Scan',
+        url: 'https://scan.genechain.io',
+        standard: 'EIP3091'
+      }
+    ],
+    infoURL: 'https://scan.genechain.io/'
+  },
   80001: {
     name: 'Matic Testnet Mumbai',
     chainId: 80001,
@@ -2005,6 +2086,25 @@ export const chains: Chains = {
     faucets: [],
     explorers: [],
     infoURL: 'https://mdgl.io'
+  },
+  8080: {
+    name: 'GeneChain Adenine Testnet',
+    chainId: 8080,
+    shortName: 'GeneChainAdn',
+    chain: 'GeneChain',
+    network: 'adenine',
+    networkId: 8080,
+    nativeCurrency: { name: 'Testnet RNA', symbol: 'tRNA', decimals: 18 },
+    rpc: ['https://rpc-testnet.genechain.io'],
+    faucets: ['https://faucet.genechain.io'],
+    explorers: [
+      {
+        name: 'GeneChain Adenine Testnet Scan',
+        url: 'https://scan-testnet.genechain.io',
+        standard: 'EIP3091'
+      }
+    ],
+    infoURL: 'https://scan-testnet.genechain.io/'
   },
   82: {
     name: 'Meter Mainnet',
@@ -2078,6 +2178,44 @@ export const chains: Chains = {
     faucets: [],
     explorers: [],
     infoURL: 'https://www.kortho.io/'
+  },
+  85: {
+    name: 'GateChain Testnet',
+    chainId: 85,
+    shortName: 'GTC-T',
+    chain: 'gatechain',
+    network: 'testnet',
+    networkId: 85,
+    nativeCurrency: { name: 'GateToken', symbol: 'GT', decimals: 18 },
+    rpc: ['https://testnet.gatenode.cc'],
+    faucets: ['https://www.gatescan.org/testnet/faucet'],
+    explorers: [
+      {
+        name: 'GateScan',
+        url: 'https://www.gatescan.org/testnet',
+        standard: 'EIP3091'
+      }
+    ],
+    infoURL: 'https://www.gatechain.io'
+  },
+  86: {
+    name: 'GateChain Mainnet',
+    chainId: 86,
+    shortName: 'GTC',
+    chain: 'gatechain',
+    network: 'mainnet',
+    networkId: 86,
+    nativeCurrency: { name: 'GateToken', symbol: 'GT', decimals: 18 },
+    rpc: ['https://evm.gatenode.cc'],
+    faucets: ['https://www.gatescan.org/faucet'],
+    explorers: [
+      {
+        name: 'GateScan',
+        url: 'https://www.gatescan.org',
+        standard: 'EIP3091'
+      }
+    ],
+    infoURL: 'https://www.gatechain.io'
   },
   88: {
     name: 'TomoChain',
