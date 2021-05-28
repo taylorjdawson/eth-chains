@@ -1,4 +1,4 @@
-[![Publish](https://github.com/taylorjdawson/eth-chains/actions/workflows/main.yml/badge.svg)](https://github.com/taylorjdawson/eth-chains/actions/workflows/main.yml)
+[![Publish](https://github.com/taylorjdawson/eth-chains/actions/workflows/main.yml/badge.svg)](https://github.com/taylorjdawson/eth-chains/actions/workflows/main.yml) ![npm](https://img.shields.io/npm/v/eth-chains?logoColor=blue)
 
 # Eth Chains
 Helper module for getting Ethereum chains info from [chainid.network](https://chainid.network/).
