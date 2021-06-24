@@ -183,6 +183,19 @@ export const chains: Chains = {
     explorers: [],
     infoURL: 'https://web3games.org/'
   },
+  1022: {
+    name: 'Sakura',
+    chainId: 1022,
+    shortName: 'sku',
+    chain: 'Sakura',
+    network: 'sakura',
+    networkId: 1022,
+    nativeCurrency: { name: 'Sakura', symbol: 'SKU', decimals: 18 },
+    rpc: [],
+    faucets: [],
+    explorers: [],
+    infoURL: 'https://clover.finance/sakura'
+  },
   1023: {
     name: 'Clover Testnet',
     chainId: 1023,
@@ -246,6 +259,32 @@ export const chains: Chains = {
     faucets: [],
     explorers: [],
     infoURL: 'https://metadium.com'
+  },
+  110: {
+    name: 'Proton Testnet',
+    chainId: 110,
+    shortName: 'xpr',
+    chain: 'XPR',
+    network: 'testnet',
+    networkId: 110,
+    nativeCurrency: { name: 'Proton', symbol: 'XPR', decimals: 4 },
+    rpc: ['https://protontestnet.greymass.com/'],
+    faucets: [],
+    explorers: [],
+    infoURL: 'https://protonchain.com'
+  },
+  111: {
+    name: 'EtherLite Chain',
+    chainId: 111,
+    shortName: 'ETL',
+    chain: 'ETL',
+    network: 'mainnet',
+    networkId: 111,
+    nativeCurrency: { name: 'EtherLite', symbol: 'ETL', decimals: 18 },
+    rpc: ['https://rpc.etherlite.org'],
+    faucets: ['https://etherlite.org/faucets'],
+    explorers: [],
+    infoURL: 'https://etherlite.org'
   },
   1122334455: {
     name: 'IPOS Network',
@@ -319,6 +358,19 @@ export const chains: Chains = {
     faucets: [],
     explorers: [],
     infoURL: 'https://fuse.io/'
+  },
+  127: {
+    name: 'Factory 127 Mainnet',
+    chainId: 127,
+    shortName: 'feth',
+    chain: 'FETH',
+    network: 'factory127 mainnet',
+    networkId: 127,
+    nativeCurrency: { name: 'Factory 127 Token', symbol: 'FETH', decimals: 18 },
+    rpc: [],
+    faucets: [],
+    explorers: [],
+    infoURL: 'https://www.factory127.com'
   },
   128: {
     name: 'Huobi ECO Chain Mainnet',
@@ -503,7 +555,13 @@ export const chains: Chains = {
       'wss://ws-mainnet.matic.network'
     ],
     faucets: [],
-    explorers: [],
+    explorers: [
+      {
+        name: 'polygonscan',
+        url: 'https://polygonscan.com',
+        standard: 'EIP3091'
+      }
+    ],
     infoURL: 'https://matic.network/'
   },
   14: {
@@ -544,6 +602,19 @@ export const chains: Chains = {
     faucets: ['https://faucet.towolabs.com'],
     explorers: [],
     infoURL: 'https://github.com/flare-eng/coston'
+  },
+  1618: {
+    name: 'Catecoin Chain Mainnet',
+    chainId: 1618,
+    shortName: 'cate',
+    chain: 'Catechain',
+    network: 'mainnet',
+    networkId: 1618,
+    nativeCurrency: { name: 'Catecoin', symbol: 'CATE', decimals: 18 },
+    rpc: ['https://send.catechain.com'],
+    faucets: [],
+    explorers: [],
+    infoURL: 'https://catechain.com'
   },
   162: {
     name: 'Lightstreams Testnet',
@@ -1142,16 +1213,38 @@ export const chains: Chains = {
     explorers: [],
     infoURL: 'https://pirl.io'
   },
+  321: {
+    name: 'KuCoin Community Chain Mainnet',
+    chainId: 321,
+    shortName: 'kcs',
+    chain: 'KCC',
+    network: 'mainnet',
+    networkId: 321,
+    nativeCurrency: { name: 'KuCoin Token', symbol: 'KCS', decimals: 18 },
+    rpc: [
+      'https://rpc-mainnet.kcc.network',
+      'wss://rpc-ws-mainnet.kcc.network'
+    ],
+    faucets: [],
+    explorers: [
+      {
+        name: 'KCC Explorer',
+        url: 'https://explorer.kcc.io/en',
+        standard: 'EIP3091'
+      }
+    ],
+    infoURL: 'https://kcc.io'
+  },
   322: {
     name: 'KuCoin Community Chain Testnet',
     chainId: 322,
-    shortName: 'kcc',
+    shortName: 'kcst',
     chain: 'KCC',
     network: 'testnet',
     networkId: 322,
     nativeCurrency: {
       name: 'KuCoin Testnet Token',
-      symbol: 'KCS',
+      symbol: 'tKCS',
       decimals: 18
     },
     rpc: ['https://rpc-testnet.kcc.network'],
@@ -1277,7 +1370,13 @@ export const chains: Chains = {
       'wss://rinkeby.infura.io/ws/v3/${INFURA_API_KEY}'
     ],
     faucets: ['https://faucet.rinkeby.io'],
-    explorers: [],
+    explorers: [
+      {
+        name: 'etherscan-rinkeby',
+        url: 'https://rinkeby.etherscan.io',
+        standard: 'EIP3091'
+      }
+    ],
     infoURL: 'https://www.rinkeby.io'
   },
   40: {
@@ -1353,6 +1452,23 @@ export const chains: Chains = {
     faucets: [],
     explorers: [],
     infoURL: 'https://teampeggle.com'
+  },
+  421611: {
+    name: 'Arbitrum Testnet Rinkeby',
+    chainId: 421611,
+    shortName: 'arb-rinkeby',
+    chain: 'ETH',
+    network: 'rinkeby',
+    networkId: 421611,
+    nativeCurrency: {
+      name: 'Arbitrum Rinkeby Ether',
+      symbol: 'ARETH',
+      decimals: 18
+    },
+    rpc: ['https://rinkeby.arbitrum.io/rpc'],
+    faucets: [],
+    explorers: [],
+    infoURL: 'https://arbitrum.io'
   },
   42220: {
     name: 'Celo Mainnet',
@@ -1918,6 +2034,19 @@ export const chains: Chains = {
     explorers: [],
     infoURL: 'https://thaichain.io'
   },
+  721: {
+    name: 'Factory 127 Testnet',
+    chainId: 721,
+    shortName: 'tfeth',
+    chain: 'FETH',
+    network: 'factory127 testnet',
+    networkId: 721,
+    nativeCurrency: { name: 'Factory 127 Token', symbol: 'FETH', decimals: 18 },
+    rpc: [],
+    faucets: [],
+    explorers: [],
+    infoURL: 'https://www.factory127.com'
+  },
   73799: {
     name: 'Energy Web Volta Testnet',
     chainId: 73799,
@@ -2087,6 +2216,19 @@ export const chains: Chains = {
     explorers: [],
     infoURL: 'https://mdgl.io'
   },
+  803: {
+    name: 'Haic',
+    chainId: 803,
+    shortName: 'haic',
+    chain: 'Haic',
+    network: 'mainnet',
+    networkId: 803,
+    nativeCurrency: { name: 'Haicoin', symbol: 'HAIC', decimals: 18 },
+    rpc: ['https://orig.haichain.io/'],
+    faucets: [],
+    explorers: [],
+    infoURL: 'https://www.haichain.io/'
+  },
   8080: {
     name: 'GeneChain Adenine Testnet',
     chainId: 8080,
@@ -2217,6 +2359,19 @@ export const chains: Chains = {
     ],
     infoURL: 'https://www.gatechain.io'
   },
+  8724: {
+    name: 'TOOL Global Testnet',
+    chainId: 8724,
+    shortName: 'olo',
+    chain: 'OLO',
+    network: 'testnet',
+    networkId: 8724,
+    nativeCurrency: { name: 'TOOL Global', symbol: 'OLO', decimals: 18 },
+    rpc: ['https://testnet-web3.wolot.io'],
+    faucets: ['https://testnet-explorer.wolot.io'],
+    explorers: [],
+    infoURL: 'https://testnet-explorer.wolot.io'
+  },
   88: {
     name: 'TomoChain',
     chainId: 88,
@@ -2272,6 +2427,25 @@ export const chains: Chains = {
     faucets: [],
     explorers: [],
     infoURL: 'https://ethersocial.org'
+  },
+  95: {
+    name: 'CryptoKylin Testnet',
+    chainId: 95,
+    shortName: 'Kylin Testnet',
+    chain: 'EOS',
+    network: 'testnet',
+    networkId: 95,
+    nativeCurrency: { name: 'EOS', symbol: 'EOS', decimals: 18 },
+    rpc: ['https://kylin.eosargentina.io'],
+    faucets: [],
+    explorers: [
+      {
+        name: 'eosq',
+        url: 'https://kylin.eosargentina.io',
+        standard: 'EIP3091'
+      }
+    ],
+    infoURL: 'https://www.cryptokylin.io/'
   },
   97: {
     name: 'Binance Smart Chain Testnet',
