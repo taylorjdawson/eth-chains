@@ -4,5 +4,6 @@ export {
   ChainId,
   ChainName,
   NativeCurrency,
-  Explorer
+  Explorer,
+  Parent
 } from './src'

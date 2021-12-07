@@ -1,6 +1,6 @@
 import { Chain } from './types'
 import { chains } from './chains'
-export { NativeCurrency, Explorer } from './types'
+export { NativeCurrency, Explorer, Parent } from './types'
 export { ChainName, ChainId } from './enums'
 export { chains, Chain }
 
