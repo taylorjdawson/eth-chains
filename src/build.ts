@@ -20,21 +20,27 @@ const getEnumKey = (chainName: string) => {
   return enumKey // `${enumKey} = '${chainName}'`
 }
 
-const getBuildEnums = (chains: Chain[]) => chains.reduce( (enumStrings, chain, index, array) => {
-  const key = getEnumKey(chain.name)
-  const tail = index === array.length - 1 ? ' }': ', '
-  enumStrings[0] += `${key} = '${chain.name}'${tail}`
-  enumStrings[1] += `${key} = ${chain.chainId}${tail}`
-  return enumStrings
-}, ['export enum ChainName { ', 'export enum ChainId { ']).join('\n')
+const getBuildEnums = (chains: Chain[]) =>
+  chains
+    .reduce(
+      (enumStrings, chain, index, array) => {
+        const key = getEnumKey(chain.name)
+        const tail = index === array.length - 1 ? ' }' : ', '
+        enumStrings[0] += `${key} = '${chain.name}'${tail}`
+        enumStrings[1] += `${key} = ${chain.chainId}${tail}`
+        return enumStrings
+      },
+      ['export enum ChainName { ', 'export enum ChainId { ']
+    )
+    .join('\n')
 
 const generateEnumFile = async (chains: Chain[]) => {
   fs.writeFile(
     './src/enums.ts',
-    format(
-      getBuildEnums(chains),
-      { ...(prettierOptions as Options), parser: 'typescript' }
-    )
+    format(getBuildEnums(chains), {
+      ...(prettierOptions as Options),
+      parser: 'typescript'
+    })
   )
 }
 
@@ -46,7 +52,7 @@ const generateChainsFile = async () => {
   await generateEnumFile(chains)
 
   const chainsJs = chains
-    .map(chain => `${chain.chainId}: ${inspect(chain)}`)
+    .map(chain => `${chain.chainId}: ${inspect(chain, { depth: null })}`)
     .join(',\n')
 
   fs.writeFile(

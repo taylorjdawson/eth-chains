@@ -7,9 +7,13 @@ export interface Chain {
   networkId: number
   nativeCurrency: NativeCurrency
   rpc: string[]
-  explorers: Explorer[]
+  explorers?: Explorer[]
   faucets: string[]
   infoURL: string
+  icon?: string
+  slip44?: number
+  parent?: Parent
+  ens?: { registry: string }
 }
 
 export interface NativeCurrency {
@@ -23,6 +27,12 @@ export interface Explorer {
   url: string
   icon?: string
   standard: string
+}
+
+export interface Parent {
+  chain: string
+  type: 'L2' | 'shard'
+  bridges?: [{ url: string }]
 }
 
 export interface Chains {
