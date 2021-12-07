@@ -17,7 +17,7 @@ const getEnumKey = (chainName: string) => {
   let enumKey = capitalize(chainName.replace(/\s/g, ''))
   // If the key starts with a number or contains ',' or '.' then wrap it in quotes
   enumKey = !!chainName.match(/^\d|[\-\.]/) ? `'${enumKey}'` : enumKey
-  return enumKey // `${enumKey} = '${chainName}'`
+  return enumKey
 }
 
 const getBuildEnums = (chains: Chain[]) =>
