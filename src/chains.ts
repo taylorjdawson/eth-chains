@@ -1630,6 +1630,27 @@ export const chains: Chains = {
       }
     ]
   },
+  3000: {
+    name: 'Echelon',
+    chain: 'ECH',
+    network: 'mainnet',
+    rpc: ['https://rpc.ech.network'],
+    faucets: ['https://app.ech.network/faucet'],
+    nativeCurrency: { name: 'Echelon', symbol: 'ECH', decimals: 18 },
+    infoURL: 'https://ech.network',
+    shortName: 'ech',
+    chainId: 3000,
+    networkId: 3000,
+    icon: 'echelon',
+    explorers: [
+      {
+        name: 'Blockscout',
+        url: 'https://scout.ech.network',
+        icon: 'echelon',
+        standard: 'EIP3091'
+      }
+    ]
+  },
   250: {
     name: 'Fantom Opera',
     chain: 'FTM',
