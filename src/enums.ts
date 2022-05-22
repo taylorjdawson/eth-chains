@@ -1,6 +1,7 @@
 export enum ChainName {
   EthereumMainnet = 'Ethereum Mainnet',
   ExpanseNetwork = 'Expanse Network',
+  Echelon = 'Echelon',
   EthereumTestnetRopsten = 'Ethereum Testnet Ropsten',
   EthereumTestnetRinkeby = 'Ethereum Testnet Rinkeby',
   EthereumTestnetGörli = 'Ethereum Testnet Görli',
@@ -280,6 +281,7 @@ export enum ChainName {
 export enum ChainId {
   EthereumMainnet = 1,
   ExpanseNetwork = 2,
+  Echelon = 3000,
   EthereumTestnetRopsten = 3,
   EthereumTestnetRinkeby = 4,
   EthereumTestnetGörli = 5,
