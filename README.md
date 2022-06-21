@@ -38,9 +38,17 @@ chains.getByName(ChainName.EthereumMainnet) // { name: "Ethereum Mainnet", ..., 
 chains.getByName('Ethereum Mainnet')
 ```
 
+### Chain List
+```ts
+import { chainList, Chains } from 'eth-chains'
+const evmChains: Chains = chainList
+
+console.log(evmChains)
+```
+
 ### Typescript Types:
 ```ts
-import { Chain, NativeCurrency, Explorer } from 'eth-chains'
+import { Chain, NativeCurrency, Explorer, Chains } from 'eth-chains'
 const ethereum: Chain = chains.getById(ChainId.EthereumMainnet)
 ethereum.chain // 'ETH'
 ```

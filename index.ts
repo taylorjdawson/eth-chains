@@ -1,6 +1,8 @@
 export {
   default as chains,
   Chain,
+  chainList,
+  Chains,
   ChainId,
   ChainName,
   NativeCurrency,
