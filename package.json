@@ -1,6 +1,6 @@
 {
   "name": "eth-chains",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "Helper module for getting Ethereum chains info.",
   "author": "Taylor Dawson",
   "main": "dist/index.js",
@@ -11,15 +11,13 @@
   ],
   "license": "WTFPL",
   "scripts": {
-    "build": "tsc",
+    "build": "rm -r dist && tsc",
     "generate": "ts-node src/build.ts",
     "format": "prettier --write src/",
     "prepack": "yarn build"
   },
-  "dependencies": {
-    "got": "^11.8.2"
-  },
   "devDependencies": {
+    "got": "^11.8.2",
     "@types/node": "^14.14.37",
     "@types/prettier": "^2.2.3",
     "prettier": "^2.2.1",
