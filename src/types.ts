@@ -1,9 +1,10 @@
 export interface Chain {
   name: string
+  title?: string
   chainId: number
   shortName: string
   chain: string
-  network: string
+  network?: string
   networkId: number
   nativeCurrency: NativeCurrency
   rpc: string[]
@@ -14,6 +15,7 @@ export interface Chain {
   slip44?: number
   parent?: Parent
   ens?: { registry: string }
+  status?: 'deprecated'
 }
 
 export interface NativeCurrency {

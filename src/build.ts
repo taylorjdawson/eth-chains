@@ -7,6 +7,7 @@ import { Options } from 'prettier'
 import { Chain } from './types'
 import { capitalize } from './helpers'
 import prettierOptions from '../.prettierrc.json'
+import { ENUM_KEY_OVERRIDES } from './constants'
 
 const formatterOptions = {
   ...(prettierOptions as Options),
@@ -16,7 +17,7 @@ const formatterOptions = {
 const getEnumKey = (chainName: string) => {
   let enumKey = capitalize(chainName.replace(/\s/g, ''))
   // If the key starts with a number or contains ',' or '.' then wrap it in quotes
-  enumKey = !!chainName.match(/^\d|[\-\.]/) ? `'${enumKey}'` : enumKey
+  enumKey = !!chainName.match(/^\d|[\-\.\()]/) ? `'${enumKey}'` : enumKey
   return enumKey
 }
 
@@ -24,7 +25,7 @@ const getBuildEnums = (chains: Chain[]) =>
   chains
     .reduce(
       (enumStrings, chain, index, array) => {
-        const key = getEnumKey(chain.name)
+        const key = ENUM_KEY_OVERRIDES[chain.chainId] ?? getEnumKey(chain.name)
         const tail = index === array.length - 1 ? ' }' : ', '
         enumStrings[0] += `${key} = '${chain.name}'${tail}`
         enumStrings[1] += `${key} = ${chain.chainId}${tail}`
@@ -49,7 +50,9 @@ const generateChainsFile = async () => {
     'https://chainid.network/chains.json'
   ).json()
 
-  await generateEnumFile(chains)
+  await generateEnumFile(chains).catch(() => {
+    console.log('Error generating enum file')
+  })
 
   const chainsJs = chains
     .map(chain => `${chain.chainId}: ${inspect(chain, { depth: null })}`)
