@@ -11,7 +11,7 @@
   ],
   "license": "WTFPL",
   "scripts": {
-    "build": "rm -r dist && tsc",
+    "build": "tsc",
     "generate": "ts-node src/build.ts",
     "format": "prettier --write src/",
     "prepack": "yarn build"
