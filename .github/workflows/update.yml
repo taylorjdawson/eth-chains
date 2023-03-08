@@ -17,8 +17,8 @@ jobs:
         run: yarn
       - name: Generate new files
         run: yarn generate && yarn build
-      - name: Update version
-        run: yarn version --patch --no-git-tag-version
+      - name: Update version (major if there are deletions in enums.ts, otherwise minor)
+        run: git diff src/enums.ts | grep "^-[^-]" && yarn version --major --no-git-tag-version || yarn version --minor --no-git-tag-version
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
         with:
