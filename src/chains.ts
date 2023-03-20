@@ -863,7 +863,6 @@ export const chains: Chains = {
       {
         name: 'etmp',
         url: 'https://pioneer.etmscan.network',
-        icon: 'etmpscan',
         standard: 'EIP3091'
       }
     ]
@@ -1379,7 +1378,6 @@ export const chains: Chains = {
       {
         name: 'explorer',
         url: 'https://explorer.idchain.one',
-        icon: 'etherscan',
         standard: 'EIP3091'
       }
     ]
@@ -1832,7 +1830,6 @@ export const chains: Chains = {
       {
         name: 'gnosisscan',
         url: 'https://gnosisscan.io',
-        icon: 'gnosisscan',
         standard: 'EIP3091'
       },
       {
@@ -2608,6 +2605,42 @@ export const chains: Chains = {
       }
     ]
   },
+  195: {
+    name: 'OKBChain Testnet',
+    chain: 'okbchain',
+    rpc: [],
+    faucets: [],
+    nativeCurrency: {
+      name: 'OKBChain Global Utility Token in testnet',
+      symbol: 'OKB',
+      decimals: 18
+    },
+    features: [],
+    infoURL: 'https://www.okex.com/okc',
+    shortName: 'tokb',
+    chainId: 195,
+    networkId: 195,
+    explorers: [],
+    status: 'incubating'
+  },
+  196: {
+    name: 'OKBChain Mainnet',
+    chain: 'okbchain',
+    rpc: [],
+    faucets: [],
+    nativeCurrency: {
+      name: 'OKBChain Global Utility Token',
+      symbol: 'OKB',
+      decimals: 18
+    },
+    features: [],
+    infoURL: 'https://www.okex.com/okc',
+    shortName: 'okb',
+    chainId: 196,
+    networkId: 196,
+    explorers: [],
+    status: 'incubating'
+  },
   199: {
     name: 'BitTorrent Chain Mainnet',
     chain: 'BTTC',
@@ -3152,7 +3185,11 @@ export const chains: Chains = {
     name: 'Filecoin - Mainnet',
     chain: 'FIL',
     icon: 'filecoin',
-    rpc: ['https://api.node.glif.io/', 'https://rpc.ankr.com/filecoin'],
+    rpc: [
+      'https://api.node.glif.io/',
+      'https://rpc.ankr.com/filecoin',
+      'https://filecoin-mainnet.chainstacklabs.com/rpc/v1'
+    ],
     faucets: [],
     nativeCurrency: { name: 'filecoin', symbol: 'FIL', decimals: 18 },
     infoURL: 'https://filecoin.io',
@@ -3169,8 +3206,8 @@ export const chains: Chains = {
         standard: 'EIP3091'
       },
       {
-        name: 'Filmine',
-        url: 'https://explorer.filmine.io',
+        name: 'Dev.storage',
+        url: 'https://dev.storage',
         standard: 'none'
       },
       { name: 'Filscan', url: 'https://filscan.io', standard: 'none' },
@@ -3491,6 +3528,19 @@ export const chains: Chains = {
         standard: 'EIP3091'
       }
     ]
+  },
+  418: {
+    name: 'LA Testnet',
+    chain: 'LATestnet',
+    rpc: ['https://rpc.testnet.lachain.network'],
+    faucets: [],
+    nativeCurrency: { name: 'Test La Coin', symbol: 'TLA', decimals: 18 },
+    features: [{ name: 'EIP155' }],
+    infoURL: '',
+    shortName: 'latestnet',
+    chainId: 418,
+    networkId: 418,
+    explorers: []
   },
   420: {
     name: 'Optimism Goerli Testnet',
@@ -4696,7 +4746,7 @@ export const chains: Chains = {
       {
         name: 'Memo Mainnet Explorer',
         url: 'https://scan.metamemo.one:8080',
-        icon: 'memoscan',
+        icon: 'memo',
         standard: 'EIP3091'
       }
     ]
@@ -5094,7 +5144,7 @@ export const chains: Chains = {
     name: 'Core Blockchain Mainnet',
     chain: 'Core',
     icon: 'core',
-    rpc: ['https://rpc.coredao.org/'],
+    rpc: ['https://rpc.coredao.org/', 'https://rpc-core.icecreamswap.com'],
     faucets: [],
     nativeCurrency: {
       name: 'Core Blockchain Native Token',
@@ -5789,6 +5839,45 @@ export const chains: Chains = {
     status: 'deprecated'
   },
   1422: {
+    name: 'Polygon zkEVM Testnet Pre Audit-Upgraded',
+    title: 'Polygon zkEVM Testnet Pre Audit-Upgraded',
+    chain: 'Polygon',
+    rpc: [],
+    faucets: [],
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    infoURL: 'https://polygon.technology/solutions/polygon-zkevm/',
+    shortName: 'testnet-zkEVM-mango-pre-audit-upgraded',
+    chainId: 1422,
+    networkId: 1422,
+    explorers: [
+      {
+        name: 'Polygon zkEVM explorer',
+        url: 'https://explorer.public.zkevm-test.net',
+        standard: 'EIP3091'
+      }
+    ],
+    status: 'deprecated'
+  },
+  1433: {
+    name: 'Rikeza Network Mainnet',
+    title: 'Rikeza Network Mainnet',
+    chain: 'Rikeza',
+    rpc: ['https://rpc.rikscan.com'],
+    faucets: [],
+    nativeCurrency: { name: 'Rikeza', symbol: 'RIK', decimals: 18 },
+    infoURL: 'https://rikeza.io',
+    shortName: 'RIK',
+    chainId: 1433,
+    networkId: 1433,
+    explorers: [
+      {
+        name: 'Rikeza Blockchain explorer',
+        url: 'https://rikscan.com',
+        standard: 'EIP3091'
+      }
+    ]
+  },
+  1442: {
     name: 'Polygon zkEVM Testnet',
     title: 'Polygon zkEVM Testnet',
     chain: 'Polygon',
@@ -5797,8 +5886,8 @@ export const chains: Chains = {
     nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
     infoURL: 'https://polygon.technology/solutions/polygon-zkevm/',
     shortName: 'testnet-zkEVM-mango',
-    chainId: 1422,
-    networkId: 1422,
+    chainId: 1442,
+    networkId: 1442,
     explorers: [
       {
         name: 'Polygon zkEVM explorer',
@@ -6567,26 +6656,63 @@ export const chains: Chains = {
     ]
   },
   2021: {
-    name: 'Edgeware Mainnet',
+    name: 'Edgeware EdgeEVM Mainnet',
     chain: 'EDG',
-    rpc: ['https://mainnet1.edgewa.re'],
+    icon: 'edgeware',
+    rpc: [
+      'https://edgeware-evm.jelliedowl.net',
+      'https://mainnet2.edgewa.re/evm',
+      'https://mainnet3.edgewa.re/evm',
+      'https://mainnet4.edgewa.re/evm',
+      'https://mainnet5.edgewa.re/evm',
+      'wss://edgeware.jelliedowl.net',
+      'wss://mainnet2.edgewa.re',
+      'wss://mainnet3.edgewa.re',
+      'wss://mainnet4.edgewa.re',
+      'wss://mainnet5.edgewa.re'
+    ],
+    features: [{ name: 'EIP155' }, { name: 'EIP1559' }],
     faucets: [],
-    nativeCurrency: { name: 'Edge', symbol: 'EDG', decimals: 18 },
-    infoURL: 'http://edgewa.re',
+    nativeCurrency: { name: 'Edgeware', symbol: 'EDG', decimals: 18 },
+    infoURL: 'https://edgeware.io',
     shortName: 'edg',
     chainId: 2021,
-    networkId: 2021
+    networkId: 2021,
+    slip44: 523,
+    explorers: [
+      {
+        name: 'Edgscan by Bharathcoorg',
+        url: 'https://edgscan.live',
+        standard: 'EIP3091'
+      },
+      {
+        name: 'Subscan',
+        url: 'https://edgeware.subscan.io',
+        standard: 'none',
+        icon: 'subscan'
+      }
+    ]
   },
   2022: {
-    name: 'Beresheet Testnet',
+    name: 'Beresheet BereEVM Testnet',
     chain: 'EDG',
-    rpc: ['https://beresheet1.edgewa.re'],
+    rpc: [
+      'https://beresheet-evm.jelliedowl.net',
+      'wss://beresheet.jelliedowl.net'
+    ],
     faucets: [],
-    nativeCurrency: { name: 'Testnet Edge', symbol: 'tEDG', decimals: 18 },
-    infoURL: 'http://edgewa.re',
+    nativeCurrency: { name: 'Testnet EDG', symbol: 'tEDG', decimals: 18 },
+    infoURL: 'https://edgeware.io/build',
     shortName: 'edgt',
     chainId: 2022,
-    networkId: 2022
+    networkId: 2022,
+    explorers: [
+      {
+        name: 'Edgscan by Bharathcoorg',
+        url: 'https://testnet.edgscan.live',
+        standard: 'EIP3091'
+      }
+    ]
   },
   2023: {
     name: 'Taycan Testnet',
@@ -7339,8 +7465,8 @@ export const chains: Chains = {
       },
       { name: 'Beryx', url: 'https://beryx.zondax.ch', standard: 'none' },
       {
-        name: 'Filmine',
-        url: 'https://explorer.filmine.io',
+        name: 'Dev.storage',
+        url: 'https://dev.storage',
         standard: 'none'
       },
       {
@@ -7432,7 +7558,6 @@ export const chains: Chains = {
       {
         name: 'Paribu Net Explorer',
         url: 'https://explorer.paribu.network',
-        icon: 'explorer',
         standard: 'EIP3091'
       }
     ]
@@ -7452,7 +7577,6 @@ export const chains: Chains = {
       {
         name: 'Paribu Net Testnet Explorer',
         url: 'https://testnet.paribuscan.com',
-        icon: 'explorer',
         standard: 'EIP3091'
       }
     ]
@@ -7541,12 +7665,10 @@ export const chains: Chains = {
     shortName: 'btx',
     chainId: 3690,
     networkId: 3690,
-    icon: 'ethereum',
     explorers: [
       {
         name: 'bittexscan',
         url: 'https://bittexscan.com',
-        icon: 'etherscan',
         standard: 'EIP3091'
       }
     ]
@@ -7604,7 +7726,6 @@ export const chains: Chains = {
       {
         name: 'DRAC_Network Scan',
         url: 'https://www.dracscan.io',
-        icon: 'DRAC',
         standard: 'EIP3091'
       }
     ]
@@ -8330,6 +8451,25 @@ export const chains: Chains = {
       }
     ]
   },
+  6552: {
+    name: 'Scolcoin WeiChain Testnet',
+    chain: 'SCOLWEI-testnet',
+    rpc: ['https://testnet-rpc.scolcoin.com'],
+    faucets: ['https://faucet.scolcoin.com'],
+    nativeCurrency: { name: 'Scolcoin', symbol: 'SCOL', decimals: 18 },
+    infoURL: 'https://scolcoin.com',
+    shortName: 'SRC-test',
+    chainId: 6552,
+    networkId: 6552,
+    icon: 'scolcoin',
+    explorers: [
+      {
+        name: 'Scolscan Testnet Explorer',
+        url: 'https://testnet-explorer.scolcoin.com',
+        standard: 'EIP3091'
+      }
+    ]
+  },
   6626: {
     name: 'Pixie Chain Mainnet',
     chain: 'PixieChain',
@@ -8839,6 +8979,24 @@ export const chains: Chains = {
     chainId: 8285,
     networkId: 8285
   },
+  8387: {
+    name: 'Dracones Financial Services',
+    title: 'The Dracones Mainnet',
+    chain: 'FUCK',
+    rpc: ['https://api.dracones.net/'],
+    faucets: [],
+    nativeCurrency: {
+      name: 'Functionally Universal Coin Kind',
+      symbol: 'FUCK',
+      decimals: 18
+    },
+    infoURL: 'https://wolfery.com',
+    shortName: 'fuck',
+    chainId: 8387,
+    networkId: 8387,
+    icon: 'dracones',
+    explorers: []
+  },
   8453: {
     name: 'Base',
     chain: 'ETH',
@@ -8922,7 +9080,6 @@ export const chains: Chains = {
       {
         name: 'alphscan',
         url: 'https://explorer.alph.network',
-        icon: 'alphscan',
         standard: 'EIP3091'
       }
     ]
@@ -9322,7 +9479,6 @@ export const chains: Chains = {
       {
         name: 'QEasyWeb3 Explorer',
         url: 'https://www.qeasyweb3.com',
-        icon: 'qetscan',
         standard: 'EIP3091'
       }
     ]
@@ -9898,6 +10054,25 @@ export const chains: Chains = {
     ],
     parent: { type: 'L2', chain: 'eip155-43113' }
   },
+  12715: {
+    name: 'Rikeza Network Testnet',
+    title: 'Rikeza Network Testnet',
+    chain: 'Rikeza',
+    rpc: ['https://testnet-rpc.rikscan.com'],
+    faucets: [],
+    nativeCurrency: { name: 'Rikeza', symbol: 'RIK', decimals: 18 },
+    infoURL: 'https://rikeza.io',
+    shortName: 'tRIK',
+    chainId: 12715,
+    networkId: 12715,
+    explorers: [
+      {
+        name: 'Rikeza Blockchain explorer',
+        url: 'https://testnet.rikscan.com',
+        standard: 'EIP3091'
+      }
+    ]
+  },
   13000: {
     name: 'SPS',
     chain: 'SPS',
@@ -9952,7 +10127,6 @@ export const chains: Chains = {
       {
         name: 'phoenixplorer',
         url: 'https://phoenixplorer.com',
-        icon: 'phoenixplorer',
         standard: 'EIP3091'
       }
     ]
@@ -9992,6 +10166,24 @@ export const chains: Chains = {
         name: 'SPS Test Explorer',
         url: 'https://explorer.3sps.net',
         standard: 'EIP3091'
+      }
+    ]
+  },
+  15551: {
+    name: 'LoopNetwork Mainnet',
+    chain: 'LoopNetwork',
+    rpc: ['https://api.mainnetloop.com'],
+    faucets: [],
+    nativeCurrency: { name: 'LOOP', symbol: 'LOOP', decimals: 18 },
+    infoURL: 'http://theloopnetwork.org/',
+    shortName: 'loop',
+    chainId: 15551,
+    networkId: 15551,
+    explorers: [
+      {
+        name: 'loopscan',
+        url: 'http://explorer.mainnetloop.com',
+        standard: 'none'
       }
     ]
   },
@@ -10632,6 +10824,24 @@ export const chains: Chains = {
         url: 'https://fsnscan.com',
         icon: 'fsnscan',
         standard: 'EIP3091'
+      }
+    ]
+  },
+  33101: {
+    name: 'Zilliqa EVM Testnet',
+    chain: 'ZIL',
+    rpc: ['https://dev-api.zilliqa.com'],
+    faucets: ['https://dev-wallet.zilliqa.com/faucet?network=testnet'],
+    nativeCurrency: { name: 'Zilliqa', symbol: 'ZIL', decimals: 18 },
+    infoURL: 'https://www.zilliqa.com/',
+    shortName: 'zil-testnet',
+    chainId: 33101,
+    networkId: 33101,
+    explorers: [
+      {
+        name: 'Zilliqa EVM Explorer',
+        url: 'https://evmx.zilliqa.com',
+        standard: 'none'
       }
     ]
   },
@@ -11473,6 +11683,25 @@ export const chains: Chains = {
         name: 'eCredits TestNet Explorer',
         url: 'https://explorer.tst.ecredits.com',
         icon: 'ecredits',
+        standard: 'EIP3091'
+      }
+    ]
+  },
+  65450: {
+    name: 'Scolcoin Mainnet',
+    chain: 'SCOLWEI',
+    rpc: ['https://mainnet-rpc.scolcoin.com'],
+    faucets: [],
+    nativeCurrency: { name: 'Scolcoin', symbol: 'SCOL', decimals: 18 },
+    infoURL: 'https://scolcoin.com',
+    shortName: 'SRC',
+    chainId: 65450,
+    networkId: 65450,
+    icon: 'scolcoin',
+    explorers: [
+      {
+        name: 'Scolscan Explorer',
+        url: 'https://explorer.scolcoin.com',
         standard: 'EIP3091'
       }
     ]
@@ -12696,7 +12925,6 @@ export const chains: Chains = {
       {
         name: 'explorer masnet',
         url: 'https://explorer.masnet.ai',
-        icon: 'explorer',
         standard: 'EIP3091'
       }
     ]
@@ -12826,6 +13054,11 @@ export const chains: Chains = {
         name: 'Filscout - Calibration',
         url: 'https://calibration.filscout.com/en',
         standard: 'none'
+      },
+      {
+        name: 'Filfox - Calibration',
+        url: 'https://calibration.filfox.info',
+        standard: 'none'
       }
     ]
   },
@@ -12870,6 +13103,26 @@ export const chains: Chains = {
     shortName: 'olympus',
     chainId: 333999,
     networkId: 333999
+  },
+  373737: {
+    name: 'HAPchain Testnet',
+    chain: 'HAPchain',
+    rpc: ['https://jsonrpc-test.hap.land'],
+    faucets: [],
+    nativeCurrency: { name: 'HAP', symbol: 'HAP', decimals: 18 },
+    infoURL: 'https://hap.land',
+    shortName: 'hap-testnet',
+    chainId: 373737,
+    networkId: 373737,
+    icon: 'hap',
+    explorers: [
+      {
+        name: 'HAP EVM Explorer (Blockscout)',
+        url: 'https://blockscout-test.hap.land',
+        standard: 'none',
+        icon: 'hap'
+      }
+    ]
   },
   381931: {
     name: 'Metal C-Chain',
@@ -13617,9 +13870,7 @@ export const chains: Chains = {
       'https://devnetopenapi2.platon.network/rpc',
       'wss://devnetopenapi2.platon.network/ws'
     ],
-    faucets: [
-      'https://faucet.platon.network/faucet/?id=e5d32df10aee11ec911142010a667c03'
-    ],
+    faucets: ['https://devnet2faucet.platon.network/faucet'],
     nativeCurrency: { name: 'LAT', symbol: 'lat', decimals: 18 },
     infoURL: 'https://www.platon.network',
     shortName: 'platondev',
@@ -13819,6 +14070,26 @@ export const chains: Chains = {
       }
     ],
     parent: { chain: 'eip155-2099156', type: 'L2' }
+  },
+  8794598: {
+    name: 'HAPchain',
+    chain: 'HAPchain',
+    rpc: ['https://jsonrpc.hap.land'],
+    faucets: [],
+    nativeCurrency: { name: 'HAP', symbol: 'HAP', decimals: 18 },
+    infoURL: 'https://hap.land',
+    shortName: 'hap',
+    chainId: 8794598,
+    networkId: 8794598,
+    icon: 'hap',
+    explorers: [
+      {
+        name: 'HAP EVM Explorer (Blockscout)',
+        url: 'https://blockscout.hap.land',
+        standard: 'none',
+        icon: 'hap'
+      }
+    ]
   },
   10067275: {
     name: 'Plian Testnet Subchain 1',
@@ -14393,6 +14664,47 @@ export const chains: Chains = {
     shortName: 'ipos',
     chainId: 1122334455,
     networkId: 1122334455
+  },
+  1146703430: {
+    name: 'CyberdeckNet',
+    chain: 'cyberdeck',
+    rpc: ['http://cybeth1.cyberdeck.eu:8545'],
+    faucets: [],
+    nativeCurrency: { name: 'Cyb', symbol: 'CYB', decimals: 18 },
+    infoURL: 'https://cyberdeck.eu',
+    shortName: 'cyb',
+    chainId: 1146703430,
+    networkId: 1146703430,
+    icon: 'cyberdeck',
+    status: 'active',
+    explorers: [
+      {
+        name: 'CybEthExplorer',
+        url: 'http://cybeth1.cyberdeck.eu:8000',
+        icon: 'cyberdeck',
+        standard: 'none'
+      }
+    ]
+  },
+  1273227453: {
+    name: 'HUMAN Protocol',
+    title: 'HUMAN Protocol',
+    chain: 'wan-red-ain',
+    rpc: ['https://mainnet.skalenodes.com/v1/wan-red-ain'],
+    faucets: ['https://dashboard.humanprotocol.org/faucet'],
+    nativeCurrency: { name: 'sFUEL', symbol: 'sFUEL', decimals: 18 },
+    infoURL: 'https://www.humanprotocol.org',
+    shortName: 'human-mainnet',
+    chainId: 1273227453,
+    networkId: 1273227453,
+    explorers: [
+      {
+        name: 'Blockscout',
+        url: 'https://wan-red-ain.explorer.mainnet.skalenodes.com',
+        icon: 'human',
+        standard: 'EIP3091'
+      }
+    ]
   },
   1313161554: {
     name: 'Aurora Mainnet',
