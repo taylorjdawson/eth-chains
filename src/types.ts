@@ -9,13 +9,15 @@ export interface Chain {
   nativeCurrency: NativeCurrency
   rpc: string[]
   explorers?: Explorer[]
+  features?: Feature[]
   faucets: string[]
   infoURL: string
   icon?: string
   slip44?: number
   parent?: Parent
   ens?: { registry: string }
-  status?: 'deprecated'
+  status?: 'active' | 'deprecated' | 'incubating'
+  redFlags?: string[]
 }
 
 export interface NativeCurrency {
@@ -34,7 +36,11 @@ export interface Explorer {
 export interface Parent {
   chain: string
   type: 'L2' | 'shard'
-  bridges?: [{ url: string }]
+  bridges?: Array<{ url: string }>
+}
+
+export interface Feature {
+  name: string;
 }
 
 export interface Chains {
