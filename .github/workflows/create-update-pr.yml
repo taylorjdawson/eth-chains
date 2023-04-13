@@ -1,0 +1,29 @@
+name: Create Update PR
+on:
+  workflow_dispatch:
+  # Auto-update every week on midnight Monday
+  schedule:
+    - cron: '0 0 * * 1'
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+          registry-url: 'https://registry.npmjs.org'
+      - name: Install dependencies
+        run: yarn
+      - name: Generate new files
+        run: yarn generate && yarn build
+      - name: Update version (major if there are deletions in enums.ts, otherwise minor)
+        run: git diff src/enums.ts | grep "^-[^-]" && yarn version --major --no-git-tag-version || yarn version --minor --no-git-tag-version
+      - name: Commit and create PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: Update chains based on latest data from chainId.network
+          title: Update chains based on latest data from chainId.network
+          body: Update chains based on latest data from chainId.network
+          branch: update-chains
+          delete-branch: true
