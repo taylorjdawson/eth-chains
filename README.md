@@ -1,4 +1,4 @@
-[![Publish](https://github.com/taylorjdawson/eth-chains/actions/workflows/main.yml/badge.svg)](https://github.com/taylorjdawson/eth-chains/actions/workflows/main.yml) ![npm](https://img.shields.io/npm/v/eth-chains?logoColor=blue)
+[![Publish](https://github.com/taylorjdawson/eth-chains/actions/workflows/publish-release.yml/badge.svg)](https://github.com/taylorjdawson/eth-chains/actions/workflows/publish-release.yml/badge.svg) ![npm](https://img.shields.io/npm/v/eth-chains?logoColor=blue)
 
 # Eth Chains
 
@@ -13,6 +13,10 @@ yarn add eth-chains
 ```
 npm install eth-chains
 ```
+
+### Note on versioning
+
+`eth-chains` uses a weekly automated release script that updates its chain data. This release script takes breaking changes into account, so breaking changes (e.g. renamed chains) are released as a new major version, while non-breaking changes (e.g. new chains) are released as a new minor version.
 
 ## Usage
 
@@ -60,7 +64,7 @@ chains.getByName('Ethereum Mainnet')
 ### Get all Chains:
 
 ```ts
-const allChains = chains.all() 
+const allChains = chains.all()
 // { 1: { name: "Ethereum Mainnet", ..., "infoURL": "https://ethereum.org" }, 2: {...}}
 ```
 
