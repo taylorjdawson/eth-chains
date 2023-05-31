@@ -1,9 +1,9 @@
-name: Update
+name: Publish Release
 on:
   workflow_dispatch:
-  # Auto-update every week on midnight Monday
-  schedule:
-    - cron: '0 0 * * 1'
+  push:
+    branches:
+      - main
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -11,28 +11,18 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: 16.x
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: yarn
-      - name: Generate new files
-        run: yarn generate && yarn build
-      - name: Update version (major if there are deletions in enums.ts, otherwise minor)
-        run: git diff src/enums.ts | grep "^-[^-]" && yarn version --major --no-git-tag-version || yarn version --minor --no-git-tag-version
-      - name: Commit and push changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          default_author: 'github_actions'
-          message: 'Update chains based on latest data from chainId.network'
       - name: Publish to npm
-        run: yarn publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Get package.json info
         id: package_json
         uses: jaywcjlove/github-action-package@main
       - name: Create Release
-        id: create_release
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
