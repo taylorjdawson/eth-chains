@@ -3,6 +3,8 @@ export {
   Chain,
   ChainId,
   ChainName,
+  ChainIcon,
+  ChainIcons,
   NativeCurrency,
   Explorer,
   Parent,

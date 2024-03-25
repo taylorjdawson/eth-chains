@@ -1,9 +1,10 @@
-import { Chain, Chains } from './types'
+import { Chain, ChainIcon, ChainIcons, Chains } from './types'
 import { chains } from './chains'
+import { chainIcons } from './chainIcons'
 import { ChainId } from './enums'
 export { NativeCurrency, Explorer, Parent } from './types'
 export { ChainName, ChainId } from './enums'
-export { chains, Chain, Chains }
+export { chains, Chain, Chains, ChainIcon, ChainIcons, }
 
 /**
  * Get a chain by its `id`.
@@ -35,6 +36,19 @@ const get = (idOrName: string | number): Chain | undefined =>
 const all = (): Chains => chains
 
 /**
+ * Gets the entire `chainIcons` object
+ * @returns An object containing all chain Icons
+ */
+const allIcons = (): ChainIcons => chainIcons
+
+/**
+ * Get a chain by its `id`.
+ * @param name - The `name` of the icon
+ * @returns The `ChainIcon` object associated with the chain `name`
+ */
+const getIconByName = (name: string): ChainIcon | undefined => chainIcons[name]
+
+/**
  * Helper to make accessing the most popular chains easier
  */
 export const chain = {
@@ -64,5 +78,8 @@ export default {
   getByName,
   get,
   all,
-  chain
+  allIcons,
+  getIconByName,
+  chain,
+  chainIcons,
 }
