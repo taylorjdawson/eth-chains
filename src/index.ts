@@ -4,7 +4,7 @@ import { chainIcons } from './chainIcons'
 import { ChainId } from './enums'
 export { NativeCurrency, Explorer, Parent } from './types'
 export { ChainName, ChainId } from './enums'
-export { chains, Chain, Chains }
+export { chains, Chain, Chains, ChainIcon, ChainIcons, }
 
 /**
  * Get a chain by its `id`.
