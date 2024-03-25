@@ -43,6 +43,22 @@ export interface Feature {
   name: string;
 }
 
+
+export interface Icon {
+  url: string;
+  width: number;
+  height: number;
+  format: string;
+}
+export interface ChainIcon {
+  data: Icon[];
+  imgUrls: string[];
+}
+
 export interface Chains {
   [key: number]: Chain
 }
+export interface ChainIcons {
+  [key: string]: ChainIcon
+}
+
