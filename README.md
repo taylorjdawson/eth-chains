@@ -1,4 +1,4 @@
-[![Publish](https://github.com/taylorjdawson/eth-chains/actions/workflows/publish-release.yml/badge.svg)](https://github.com/taylorjdawson/eth-chains/actions/workflows/publish-release.yml/badge.svg) [![npm](https://img.shields.io/npm/v/eth-chains?logoColor=blue)](https://www.npmjs.com/package/eth-chains)
+[![Publish](https://github.com/taylorjdawson/eth-chains/actions/workflows/publish-release.yml/badge.svg)](https://github.com/taylorjdawson/eth-chains/actions/workflows/publish-release.yml) [![npm](https://img.shields.io/npm/v/eth-chains?logoColor=blue)](https://www.npmjs.com/package/eth-chains)
 
 # Eth Chains
 
